@@ -1,0 +1,110 @@
+﻿<Window x:Class="Lesson3HomeWorkDesignPat.Date_28_11_23.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lesson3HomeWorkDesignPat.Date_28_11_23"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+
+
+    <StackPanel>
+        <Grid Height="50" Background="Blue"  ></Grid>
+
+        <Border BorderBrush="Black" BorderThickness="4" Margin="25,0,25,0">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center"
+                   Grid.Column="0" >
+                    
+                    <TextBlock Text="Name" 
+                       HorizontalAlignment="Left" FontSize="25" 
+                       FontWeight="Bold" Margin="0,0,0,0">
+                    </TextBlock>
+                    <TextBox Text="{Binding AnketData.Name,Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}" 
+                             FontSize="30" FontWeight="Bold"
+                         BorderBrush="Black" BorderThickness="2" Width="300"
+                         >
+                    </TextBox>
+
+                    <TextBlock Text="Surname" 
+                       HorizontalAlignment="Left" FontSize="25" 
+                       FontWeight="Bold" Margin="0,10,0,0">
+                    </TextBlock>
+                    <TextBox Text="{Binding AnketData.Surname,Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}" 
+                             FontSize="30" FontWeight="Bold"
+                         BorderBrush="Black" BorderThickness="2" Width="300">
+                    </TextBox>
+
+                    <TextBlock Text="Age" 
+                       HorizontalAlignment="Left" FontSize="25" 
+                       FontWeight="Bold" Margin="0,10,0,0">
+                    </TextBlock>
+                    <TextBox Text="{Binding AnketData.Age,Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}" 
+                             FontSize="30" FontWeight="Bold"
+                         BorderBrush="Black" BorderThickness="2" Width="300">
+                    </TextBox>
+
+                    <TextBlock Text="Seria No" 
+                       HorizontalAlignment="Left" FontSize="25" 
+                       FontWeight="Bold" Margin="0,10,0,0">
+                    </TextBlock>
+                    <TextBox Text="{Binding AnketData.SeriaNo, Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}"  
+                             FontSize="30" FontWeight="Bold"
+                         BorderBrush="Black" BorderThickness="2" Width="300">
+                    </TextBox>
+                    <StackPanel Orientation="Horizontal">
+                        
+                    <Button Content="Save" Width="145" FontSize="20" 
+                        FontWeight="Bold" Background="LightBlue"
+                        Margin="0,10,0,10" BorderBrush="Blue"
+                        BorderThickness="2" Command="{Binding SaveBtnCommand}">
+                    </Button>
+                        <Button Content="Read" Width="145" FontSize="20" 
+                        FontWeight="Bold" Background="Red"
+                                Foreground="White"
+                        Margin="10,10,0,10" BorderBrush="Blue"
+                        BorderThickness="2" Command="{Binding ReadBtnCommand}">
+                        </Button>
+                    </StackPanel>
+                    
+                    
+
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                    <RadioButton Content="Json" FontSize="20" 
+                                 FontWeight="Bold" Margin="0,0,0,20"
+                                 IsChecked="{Binding IsCheckJson,Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}">
+                    </RadioButton>
+
+                    <RadioButton Content="XML" FontSize="20" FontWeight="Bold" 
+                                 IsChecked="{Binding IsCheckXML,Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}">
+                    </RadioButton>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+
+
+
+    </StackPanel>
+
+
+
+
+
+</Window>
+    
