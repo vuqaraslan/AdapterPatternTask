@@ -129,64 +129,6 @@ namespace Lesson3HomeWorkDesignPat.Date_28_11_23.ViewModels
                     AnketData = data;
                 }
             });
-
-            //SaveBtnCommand = new RelayCommand((obj) =>
-            //{
-            //    //if(File.Exists(App.AnketFileName))
-            //    // {
-            //    //     var data=FileHelper.Read<AnketData>(App.AnketFileName);
-            //    // }
-
-            //    if (IsCheckJson)
-            //    {
-
-            //    FileHelper.Write(AnketData, App.AnketFileNameJson);
-            //    MessageBox.Show($"Anket data is saved!");
-            //    AnketData = new AnketData();
-            //    }
-            //    else if (IsCheckXML)
-            //    {
-            //        XmlHelper.Write<AnketData>(AnketData, App.AnketFileNameXML);
-            //        MessageBox.Show($"Anket data is saved!");
-            //        AnketData = new AnketData();
-            //    }
-            //}
-            ////(pred) =>
-            ////{
-            ////    if (IsCheckJson)
-            ////    {
-            ////        return true;
-            ////    }
-            ////    else
-            ////    {
-            ////        return false;
-            ////    }
-            ////}
-            //);
-
-            //ReadBtnCommand = new RelayCommand((obj) =>
-            //{
-            //    //if (File.Exists(App.AnketFileName))
-            //    //{
-            //    //    var data=FileHelper.Read<AnketData>(App.AnketFileName);
-            //    //    AnketData = data;
-            //    //}
-            //    //else
-            //    //{
-            //    //}
-            //    if(IsCheckJson)
-            //    {
-
-            //    var data = FileHelper.Read<AnketData>(App.AnketFileNameJson);
-            //    AnketData = data;
-            //    }
-            //    else if(IsCheckXML)
-            //    {
-            //        var data = XmlHelper.Read<AnketData>(App.AnketFileNameXML);
-            //        AnketData = data;
-            //    }
-            //});
-
         }
 
     }
